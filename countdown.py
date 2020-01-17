@@ -13,9 +13,6 @@ def convert(seconds):
     return "%d:%02d:%02d" % (hour, minutes, seconds) 
       
 # Driver program 
-diff = int(str(datetime.datetime(2020, 1, 17,15,20,0) - datetime.datetime.today()))
-
-print(convert(diff)) 
 
 class GraphicsTest(SampleBase):
     def __init__(self, *args, **kwargs):
