@@ -77,12 +77,12 @@ def Downtown(x):
 def Uptown45():
     text = "↑ "
     Jsonify(fourfiveURL)
-    text += Uptown(0)
+    text += Uptown(1)
     return text
 def Downtown45():
     text = "↓ "
     Jsonify(fourfiveURL)
-    text += Downtown(0)
+    text += Downtown(1)
     return text
 def Uptown23():
     text = "↑ "
