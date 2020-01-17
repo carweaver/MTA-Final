@@ -28,7 +28,8 @@ class GraphicsTest(SampleBase):
         red = graphics.Color(255, 0, 0)
         blue = graphics.Color(0, 0, 255)
         while True:
-          graphics.DrawText(canvas, font, 2, 10, blue, convert(diff))
+          counter = str(datetime.datetime(2020, 1, 17,15,20,0) - datetime.datetime.today())
+          graphics.DrawText(canvas, font, 2, 10, blue, counter)
           time.sleep(1)
           canvas.Clear()
         
