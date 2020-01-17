@@ -26,7 +26,7 @@ class GraphicsTest(SampleBase):
         blue = graphics.Color(0, 0, 255)
         while True:
           counter = str(datetime.datetime(2020, 1, 17,15,20,0) - datetime.datetime.today())
-          graphics.DrawText(canvas, font, 2, 10, blue, counter)
+          graphics.DrawText(canvas, font, 2, 10, red, counter)
           time.sleep(1)
           canvas.Clear()
         
