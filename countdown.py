@@ -31,11 +31,11 @@ class GraphicsTest(SampleBase):
         green = graphics.Color(0, 255, 0)
         blue = graphics.Color(0, 0, 255)
         while True:
-          now = datetime.now()
-        	counter = "%d hours, %d minutes, %d seconds" % daysHoursMinutesSecondsFromSeconds(dateDiffInSeconds(now, leaving_date))
-          graphics.DrawText(canvas, font, 2, 10, blue, counter)
-          time.sleep(1)
-          canvas.Clear()
+       		now = datetime.now()
+        	counter = "%d hours, %d minutes, %d seconds" % daysHoursMinutesSecondsFromSeconds(dateDiffInSeconds(now, leaving_date)
+        	graphics.DrawText(canvas, font, 2, 10, blue, counter)
+        	time.sleep(1)
+        	canvas.Clear()
 
        # time.sleep(100000)   # show display for 10 seconds before exit
 
