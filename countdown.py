@@ -27,7 +27,7 @@ class GraphicsTest(SampleBase):
         while True:
           counter = str(datetime.datetime(2020, 1, 17,15,20,0) - datetime.datetime.today())
           splitter = counter.split(".",1)[0]
-          graphics.DrawText(canvas, font, 2, 10, red, splitter)
+          graphics.DrawText(canvas, font, 8, 10, red, splitter)
           time.sleep(1)
           canvas.Clear()
         
