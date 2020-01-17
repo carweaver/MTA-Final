@@ -33,7 +33,7 @@ class GraphicsTest(SampleBase):
         while True:
        		now = datetime.now()
         	counter = "%d hours, %d minutes, %d seconds" % daysHoursMinutesSecondsFromSeconds(dateDiffInSeconds(now, leaving_date)
-        	graphics.DrawText(canvas, font, 2, 10, blue, counter)
+        	graphics.DrawText(canvas, font, 2, 10, blue, "test")
         	time.sleep(1)
         	canvas.Clear()
 
