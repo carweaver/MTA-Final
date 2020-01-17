@@ -28,7 +28,7 @@ class GraphicsTest(SampleBase):
         font.LoadFont("../../../fonts/7x13.bdf")
         red = graphics.Color(255, 0, 0)
         blue = graphics.Color(0, 0, 255)
-      while True:
+        while True:
           now = datetime.now()
           counter = "%d hours, %d minutes, %d seconds" % daysHoursMinutesSecondsFromSeconds(dateDiffInSeconds(now, leaving_date))
           graphics.DrawText(canvas, font, 2, 10, blue, counter)
