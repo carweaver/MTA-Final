@@ -77,22 +77,22 @@ def Downtown(x):
 def Uptown45():
     text = "↑ "
     Jsonify(fourfiveURL)
-    text += Uptown(1)
+    text += Uptown(2)
     return text
 def Downtown45():
     text = "↓ "
     Jsonify(fourfiveURL)
-    text += Downtown(1)
+    text += Downtown(2)
     return text
 def Uptown23():
     text = "↑ "
     Jsonify(twothreeURL)
-    text += Uptown(1)
+    text += Uptown(2)
     return text
 def Downtown23():
     text = "↓ "
     Jsonify(twothreeURL)
-    text += Downtown(1)
+    text += Downtown(2)
     return text
 subwaytimeslist = []
 def runall():
