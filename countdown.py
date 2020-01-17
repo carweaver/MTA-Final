@@ -2,21 +2,20 @@
 from samplebase import SampleBase
 from rgbmatrix import graphics
 import time
-from datetime import datetime, time
-import time
+import datetime
+def convert(seconds): 
+    seconds = seconds % (24 * 3600) 
+    hour = seconds // 3600
+    seconds %= 3600
+    minutes = seconds // 60
+    seconds %= 60
+      
+    return "%d:%02d:%02d" % (hour, minutes, seconds) 
+      
+# Driver program 
+diff = datetime.datetime(2020, 1, 17,15,20,0) - datetime.datetime.today()
 
-def dateDiffInSeconds(date1, date2):
-  timedelta = date2 - date1
-  return timedelta.days * 24 * 3600 + timedelta.seconds
-
-def daysHoursMinutesSecondsFromSeconds(seconds):
-    minutes, seconds = divmod(seconds, 60)
-    hours, minutes = divmod(minutes, 60)
-    days, hours = divmod(hours, 24)
-    return (days, hours, minutes, seconds)
-
-leaving_date = datetime.strptime('2020-01-17 16:20:00', '%Y-%m-%d %H:%M:%S')
-
+print(convert(diff)) 
 
 class GraphicsTest(SampleBase):
     def __init__(self, *args, **kwargs):
@@ -29,9 +28,7 @@ class GraphicsTest(SampleBase):
         red = graphics.Color(255, 0, 0)
         blue = graphics.Color(0, 0, 255)
         while True:
-          now = datetime.now()
-          counter = str("%d hours, %d minutes, %d seconds" % daysHoursMinutesSecondsFromSeconds(dateDiffInSeconds(now, leaving_date)))
-          graphics.DrawText(canvas, font, 2, 10, blue, counter)
+          graphics.DrawText(canvas, font, 2, 10, blue, convert(diff))
           time.sleep(1)
           canvas.Clear()
         
